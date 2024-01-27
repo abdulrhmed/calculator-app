@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  /* Theme 1 */
+  --main-bg-1: hsl(222, 26%, 31%);
+  --toggle-keypad-bg-1: hsl(223, 31%, 20%);
+  --screen-bg-1: hsl(224, 36%, 15%);
+  --key-bg-1: hsl(225, 21%, 49%);
+  --key-shadow-1: hsl(224, 28%, 35%);
+  --red-1: hsl(6, 63%, 50%);
+  --dark-red-1: hsl(6, 70%, 34%);
+  --light-grayish-orange-1: hsl(30, 25%, 89%);
+  --grayish-orange-1: hsl(28, 16%, 65%);
+  --very-dark-grayish-blue-1: hsl(221, 14%, 31%);
+  --white-1: hsl(0, 0%, 100%);
+
+  /* Theme 2 */
+  --main-bg-2: hsl(0, 0%, 90%);
+  --toggle-keypad-bg-2: hsl(0, 5%, 81%);
+  --screen-bg-2: hsl(0, 0%, 93%);
+  --key-bg-2: hsl(185, 42%, 37%);
+  --very-dark-cyan-2: hsl(185, 58%, 25%);
+  --orange-2: hsl(25, 98%, 40%);
+  --dark-orange-2: hsl(25, 99%, 27%);
+  --light-grayish-yellow-2: hsl(45, 7%, 89%);
+  --dark-grayish-orange-2: hsl(35, 11%, 61%);
+  --very-dark-grayish-yellow-2: hsl(60, 10%, 19%);
+  --white-2: hsl(0, 0%, 100%);
+
+  /* Theme 3 */
+  --main-bg-3: hsl(268, 75%, 9%);
+  --toggle-keypad-bg-3: hsl(268, 71%, 12%);
+  --key-bg-3: hsl(281, 89%, 26%);
+  --vivid-magenta-3: hsl(285, 91%, 52%);
+  --pure-cyan-3: hsl(176, 100%, 44%);
+  --soft-cyan-3: hsl(177, 92%, 70%);
+  --very-dark-violet-3: hsl(268, 47%, 21%);
+  --dark-magenta-3: hsl(290, 70%, 36%);
+  --light-yellow-3: hsl(52, 100%, 62%);
+  --very-dark-blue-3: hsl(198, 20%, 13%);
+  --white-3: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--key-bg-1);
+}
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+/* :start .box-one  */
+.box-one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.box-one .calc {
+  font-size: 26px;
+  color: var(--light-grayish-yellow-2);
+}
+.control-thems {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.control-thems .THEM {
+  font-size: 11px;
+  color: var(--white-1);
+}
+.themss {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+}
+.num {
+  display: flex;
+  gap: 15px;
+}
+.num p {
+  font-size: 11px;
+  color: var(--white-1);
+  cursor: pointer;
+}
+.circle {
+  background: black;
+  width: 100%;
+  height: 14px;
+  border-radius: 10px;
+  padding: 0px 3px 0px 3px;
+  position: relative;
+}
+.circle span {
+  background: red;
+  width: 10px;
+  display: block;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translate(0, -50%);
+  transition: 0.7s ease;
+}
+/* :end .box-one  */
+
+/* :start .box-two  */
+
+#result {
+  margin-bottom: 30px;
+  background: var(--screen-bg-1);
+  padding: 20px 25px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  font-size: 70px;
+  font-weight: bold;
+  color: var(--light-grayish-orange-1);
+  border: none;
+}
+
+/* :end .box-two */
+
+/* :start .box-three */
+.box-three {
+  background-color: var(--key-shadow-1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.butn {
+  width: 24%;
+  padding: 17px 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--key-shadow-1);
+  background-color: var(--main-bg-2);
+  border: navajowhite;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.butn1 {
+  width: 48.5%;
+  padding: 17px 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--key-shadow-1);
+  background-color: var(--main-bg-2);
+  border: navajowhite;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.butn:hover,
+.butn1:hover {
+  opacity: 0.8;
+}
+#del {
+  color: var(--screen-bg-2);
+  background: var(--key-bg-1);
+}
+#reset {
+  color: var(--screen-bg-2);
+  background: var(--key-bg-1);
+}
+#equals {
+  color: var(--screen-bg-2);
+  background: var(--red-1);
+}
+/* :end .box-three */
+
+@media (max-width: 750px){
+  .container {
+    width: 100%;
+    margin: 50px auto;
+    padding: 10px;
+}
+.butn {
+  width: calc(80% / 4);
+}
+.box-btn{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+}
